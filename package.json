@@ -9,7 +9,7 @@
     "install:ci": "bash scripts/install-ci.sh",
     "dev": "vite",
     "build": "npx vinext build",
-    "start": "node server.js",
+    "start": "node server.cjs",
     "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
