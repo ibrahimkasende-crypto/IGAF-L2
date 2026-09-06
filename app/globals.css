@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "../vendor/shadcn-tailwind-4.13.0.css";
+
+:root {
+  --background: #f4f8fb; --foreground: #102a43; --card: #ffffff; --card-foreground: #102a43;
+  --popover: #ffffff; --popover-foreground: #102a43; --primary: #0879b7; --primary-foreground: #ffffff;
+  --secondary: #e8f4fb; --secondary-foreground: #075985; --muted: #edf4f7; --muted-foreground: #5d7285;
+  --accent: #fff6d9; --accent-foreground: #7a5800; --destructive: #c62f43; --border: #d7e5ed;
+  --input: #c9dce7; --ring: #0879b7; --radius: 1rem;
+}
+@theme inline {
+  --color-background: var(--background); --color-foreground: var(--foreground); --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground); --color-popover: var(--popover); --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary); --color-primary-foreground: var(--primary-foreground); --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground); --color-muted: var(--muted); --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent); --color-accent-foreground: var(--accent-foreground); --color-destructive: var(--destructive);
+  --color-border: var(--border); --color-input: var(--input); --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 5px); --radius-md: calc(var(--radius) - 3px); --radius-lg: var(--radius); --radius-xl: calc(var(--radius) + 6px);
+  --font-sans: "Aptos", "Segoe UI", Arial, sans-serif;
+}
+* { border-color: var(--border); }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--background); color: var(--foreground); font-family: var(--font-sans); }
+button, input, select { font: inherit; }
+::selection { background: #f4d65a; color: #102a43; }
+.mesh { background-image: radial-gradient(circle at 10% 10%, rgba(244,214,90,.24), transparent 25%), radial-gradient(circle at 90% 5%, rgba(8,121,183,.16), transparent 30%); }
+.safe-bottom { padding-bottom: max(1rem, env(safe-area-inset-bottom)); }
+@media print { .no-print { display:none!important; } body { background:white; } }
